@@ -15,12 +15,22 @@ public class StudyTracker {
         //constructor
     }
 
-    public void addTask(StudyTask taskName) {
-        tasks.add(taskName);
+    public void addTask(StudyTask task) {
+        tasks.add(task);
     }
 
     public void viewTasks(){
         System.out.println(tasks);
+    }
+
+    public StudyTask findTask(int taskID){
+        for (StudyTask i : tasks){
+            if (i.taskID == taskID){
+                return i;
+            }
+        
+        }
+        return null;
     }
 
 }
