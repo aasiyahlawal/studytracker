@@ -9,6 +9,18 @@ import java.util.ArrayList; //Import the Arrayuist class
 //calculateProgress() count completed and outstanding tasks
 
 public class StudyTracker {
-    ArrayList<String> tasks = new ArrayList<String>();
+    ArrayList<StudyTask> tasks = new ArrayList<StudyTask>();
+
+    public StudyTracker() {
+        //constructor
+    }
+
+    public void addTask(StudyTask taskName) {
+        tasks.add(taskName);
+    }
+
+    public void viewTasks(){
+        System.out.println(tasks);
+    }
 
 }
