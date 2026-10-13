@@ -20,7 +20,11 @@ public class StudyTracker {
     }
 
     public void viewTasks(){
-        System.out.println(tasks);
+        //System.out.println(tasks);
+        for (StudyTask i : tasks){
+            System.out.println("--------------------");
+            i.displayTask();
+        }
     }
 
     public StudyTask findTask(int taskID){
@@ -30,6 +34,7 @@ public class StudyTracker {
             }
         
         }
+        System.out.println("Task " + taskID + " was not found");
         return null;
     }
 
@@ -40,6 +45,14 @@ public class StudyTracker {
             return true;
         }
         return false;
+    }
+
+    public void removeTask(int taskId){
+        StudyTask deleteTask = findTask(taskId);
+        if (deleteTask != null){
+            tasks.remove(deleteTask);
+            System.out.println("The task has been removed");
+        }
     }
 
 }
