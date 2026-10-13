@@ -33,4 +33,13 @@ public class StudyTracker {
         return null;
     }
 
+    public boolean markComplete(int taskID){
+        StudyTask foundTask = findTask(taskID);
+        if (foundTask != null){
+            foundTask.markCompleted();
+            return true;
+        }
+        return false;
+    }
+
 }
