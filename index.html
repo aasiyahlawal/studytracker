@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link rel="stylesheet" href="studytracker.css" -->   
+    <title>Study Tracker</title>
+</head>
+
+<h1 style="text-align: center;">Study Tracker</h1>
+<h2>Welcome to your own personal study tracker where you can keep track of the tasks you need to complete!</h2>
+<h3 id="current_date_time">Current Date and Time</h3>
+
+<script>
+    setInterval(() => {
+        document.getElementById("current_date_time").innerHTML = "Current Date and Time: " + new Date().toLocaleString();
+    }, 1000)    
+</script>
+
+</html>
